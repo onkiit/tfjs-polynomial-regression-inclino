@@ -20,8 +20,8 @@ import sensorData from './sensor'
 
 export function generateData() {
   return tf.tidy(() => {
-    let xs = tf.tensor(sensorData.data.map(x => x.DSPA))
-    let ys = tf.tensor(sensorData.data.map(x => x.displacement))
+    let xs = tf.tensor(sensorData.data.map(x => x.DSPA)) //nilai sensor
+    let ys = tf.tensor(sensorData.data.map(x => x.displacement)) //kedalaman sensor
 
     return {
       xs,
